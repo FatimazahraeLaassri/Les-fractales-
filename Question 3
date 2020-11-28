@@ -11,7 +11,7 @@ a3=4
 b3=6
 abscisse3 = []
 ordonne3 = []
-for i in range(30001):   
+for i in range(15001):   
     p3= random.uniform(0,1)
     if p3<=0.333: 
         xn= 0.5*(x+a1)
