@@ -1,0 +1,31 @@
+#question2
+import random 
+import matplotlib.pyplot as plt
+x=0.05
+y=0.0
+abscisse2 = []
+ordonne2 = []
+for i in range(30001):   
+    p2= random.uniform(0,1)
+    if p2<=0.02: 
+        xn= 0.5
+        yn= 0.27*y
+    elif 0.02<p2<0.17:
+        xn= -0.139*x+0.263*y+0.57
+        yn= 0.246*x+0.224*y-0.036
+    elif 0.17<p2<0.3:
+        xn= 0.17*x-0.215*y+0.408
+        yn= 0.222*x+0.176*y+0.0893
+    elif p2>=0.3:
+        xn= 0.781*x+0.034*y+0.1075
+        yn= -0.032*x +0.739*y+0.27
+ 
+    x=xn
+    y=yn
+    abscisse2.append(xn)
+    ordonne2.append(yn)
+ax = plt.gca()
+ax.set_xticks([])
+ax.set_yticks([])
+plt.plot(abscisse2 , ordonne2,'r.')
+plt.show()
